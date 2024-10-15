@@ -4,14 +4,14 @@ echo "deb https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk -y
 javac -version
-sudo wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.4.1.tgz
-tar zxvf apache-jmeter-5.4.1.tgz
-mv apache-jmeter-5.4.1 jmeter-5.4.1
-jmeter-5.4.1/bin/jmeter -v
-cd jmeter-5.4.1/lib
-sudo wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar
+sudo wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.tgz
+tar zxvf apache-jmeter-5.6.3.tgz
+mv apache-jmeter-5.6.3 jmeter-5.6.3
+jmeter-5.6.3/bin/jmeter -v
+cd jmeter-5.6.3/lib
+sudo wget https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.3/cmdrunner-2.3.jar
 cd ext/
-sudo wget https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.6/jmeter-plugins-manager-1.6.jar
+sudo wget https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.9/jmeter-plugins-manager-1.9.jar
 cd ..
 
-java  -jar cmdrunner-2.2.jar --tool org.jmeterplugins.repository.PluginManagerCMD install-all-except jpgc-hadoop,jpgc-oauth,ulp-jmeter-autocorrelator-plugin,ulp-jmeter-videostreaming-plugin,ulp-jmeter-gwt-plugin,tilln-iso8583
+java  -jar cmdrunner-2.3.jar --tool org.jmeterplugins.repository.PluginManagerCMD install-all-except jpgc-hadoop,jpgc-oauth,ulp-jmeter-autocorrelator-plugin,ulp-jmeter-videostreaming-plugin,ulp-jmeter-gwt-plugin,tilln-iso8583
