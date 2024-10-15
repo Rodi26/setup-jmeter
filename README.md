@@ -5,7 +5,7 @@ A github action that allows you to install and setup jmeter inside your github a
 
 ```yml
 - name: Setup Jmeter
-  uses: tush-tr/setup-jmeter@v1.1.0
+  uses: Rodi26/setup-jmeter@v0.0.1
 ```
 
 ## Example workflow
@@ -19,5 +19,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Jmeter
-        uses: tush-tr/setup-jmeter@v1.1.0
+        uses: Rodi26/setup-jmeter@v0.0.1
 ```
